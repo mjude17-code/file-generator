@@ -17,6 +17,20 @@ from pptx.enum.text import PP_ALIGN
 app = Flask(__name__)
 CORS(app)
 
+# ===== HOME ROUTE =====
+@app.route("/")
+def home():
+    return jsonify({
+        "message": "File Generator API",
+        "endpoints": {
+            "word": "/generate/word",
+            "pdf": "/generate/pdf",
+            "excel": "/generate/excel",
+            "ppt": "/generate/ppt",
+            "health": "/health"
+        }
+    })
+
 # ===== WORD FILE GENERATION =====
 @app.route('/generate/word', methods=['POST'])
 def generate_word():
