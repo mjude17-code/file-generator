@@ -1,4 +1,5 @@
-Flask==2.3.2
+setuptools
+gunicornFlask==2.3.2
 Flask-CORS==4.0.0
 python-docx==0.8.11
 reportlab==4.0.4
